@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - HoaNK Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="../index.html">HoaNK</a></div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Bạn tìm gì hôm nay?..." onkeyup="handleSearch(event)">
+                <button type="button" onclick="triggerSearch()" class="search-btn-svg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="header-menu">
+                <nav>
+                    <ul>
+                        <li><a href="san-pham.html">Sản phẩm</a></li>
+                        <li><a href="gioi-thieu.html" class="active">Giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                        <li><a href="#tai-khoan">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <a href="gio-hang.html" class="cart-btn">Giỏ hàng (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-page-container">
+        <main class="about-wrapper">
+            
+            <section class="about-hero">
+                <h1>Câu Chuyện Về HoaNK Store</h1>
+                <p class="about-lead">Nơi công nghệ đỉnh cao gặp gỡ sự tận tâm và uy tín tuyệt đối.</p>
+            </section>
+
+            <hr class="about-divider">
+
+            <section class="about-content-grid">
+                <div class="about-text-block">
+                    <h2>Chúng tôi là ai?</h2>
+                    <p>Được thành lập với niềm đam mê cháy bỏng dành cho các thiết bị công nghệ đột phá, <strong>HoaNK Store</strong> đã từng bước khẳng định vị thế là một trong những hệ thống bán lẻ điện thoại, máy tính bảng và phụ kiện chính hãng uy tín hàng đầu.</p>
+                    <p>Chúng tôi không chỉ bán sản phẩm, chúng tôi mang lại cho bạn những giải pháp công nghệ tối ưu để nâng tầm cuộc sống, kết nối thông tin và tối đa hóa hiệu suất làm việc của bạn mỗi ngày.</p>
+                </div>
+                <div class="about-text-block highlight-box">
+                    <h2>Sứ mệnh & Tầm nhìn</h2>
+                    <p>🎯 <strong>Sứ mệnh:</strong> Đưa những sản phẩm công nghệ cao cấp nhất, mới nhất đến tay người tiêu dùng Việt Nam với mức giá hợp lý cùng dịch vụ hậu mãi vượt trội.</p>
+                    <p>🚀 <strong>Tầm nhìn:</strong> Trở thành hệ thống sinh thái mua sắm công nghệ thông minh, nơi khách hàng luôn có thể trao gửi niềm tin trọn vẹn khi nghĩ tới đồ công nghệ.</p>
+                </div>
+            </section>
+
+            <section class="about-values">
+                <h2 class="section-title">Giá Trị Cốt Lõi Tại HoaNK Store</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🛡️</div>
+                        <h3>Chất Lượng Tối Thượng</h3>
+                        <p>100% sản phẩm cung cấp tại cửa hàng đều là hàng chính hãng, có nguồn gốc rõ ràng và trải qua quy trình kiểm định nghiêm ngặt.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h3>Khách Hàng Là Trung Tâm</h3>
+                        <p>Mọi chính sách đổi trả, bảo hành 1 đổi 1 và tư vấn đều được xây dựng dựa trên lợi ích cao nhất của người mua hàng.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⚡</div>
+                        <h3>Tốc Độ & Tiên Phong</h3>
+                        <p>Luôn cập nhật nhanh nhất các xu hướng công nghệ mới, giao hàng thần tốc toàn quốc đáp ứng mọi nhu cầu cấp bách.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>110124066, DA24TTC, Thiết kế web</p>
+        <p>GVHD: Nguyễn Ngọc Đan Thanh</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        window.onload = function() {
+            // Tự động đồng bộ số lượng giỏ hàng hiển thị từ LocalStorage lên Header
+            updateCartCount();
+        }
+    </script>
+</body>
+</html>

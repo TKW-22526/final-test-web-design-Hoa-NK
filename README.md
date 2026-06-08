@@ -175,10 +175,10 @@ Sinh viên cần nộp đầy đủ các nội dung sau:
 Sinh viên cập nhật thông tin cá nhân tại đây:
 
 ```text
-Họ và tên:
-Mã số sinh viên:
-Lớp:
-Tên đề tài:
+Họ và tên: Nguyễn Khánh Hòa
+Mã số sinh viên: 110124066
+Lớp: DA24TTC
+Tên đề tài: Trang Web bán hàng 
 Liên kết GitHub repository:
 Liên kết GitHub Pages:
 ```

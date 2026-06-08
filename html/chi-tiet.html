@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm - HoaNK Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="../index.html">HoaNK</a></div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Bạn tìm gì hôm nay?..." onkeyup="handleSearch(event)">
+                <button type="button" onclick="triggerSearch()" class="search-btn-svg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="header-menu">
+                <nav>
+                    <ul>
+                        <li><a href="san-pham.html">Sản phẩm</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                        <li><a href="#tai-khoan">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <a href="gio-hang.html" class="cart-btn">Giỏ hàng (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-detail-container">
+        <div class="product-detail-wrapper" id="product-detail-content">
+            <div style="text-align: center; padding: 50px; color: #666; width: 100%;">
+                <p>Đang tải thông tin sản phẩm...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>110124066, DA24TTC, Thiết kế web</p>
+        <p>GVHD: Nguyễn Ngọc Đan Thanh</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        window.onload = function() {
+    // 1. Cập nhật số lượng giỏ hàng trên Header
+    updateCartCount();
+
+    // 2. Lấy ID từ localStorage (Chuyển sang localStorage để không bị mất khi đổi thư mục)
+    let productId = parseInt(localStorage.getItem('selectedProductId')) || 1;
+    
+    // Tìm sản phẩm trong mảng hệ thống (đã khai báo trong script.js)
+    const product = products.find(p => p.id === productId);
+    const container = document.getElementById('product-detail-content');
+
+    if (product && container) {
+        let priceHtml = `<div class="detail-price-box"><span class="current-price">${product.price.toLocaleString('vi-VN')} đ</span></div>`;
+        let discountBadgeHtml = '';
+
+        if (product.oldPrice && product.oldPrice > product.price) {
+            const discountPercent = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+            discountBadgeHtml = `<span class="detail-discount-badge">-${discountPercent}% GIẢM</span>`;
+            
+            priceHtml = `
+                <div class="detail-price-box">
+                    <span class="current-price">${product.price.toLocaleString('vi-VN')} đ</span>
+                    <span class="old-price">${product.oldPrice.toLocaleString('vi-VN')} đ</span>
+                    ${discountBadgeHtml}
+                </div>
+            `;
+        }
+
+        container.innerHTML = `
+            <div class="detail-left-image">
+                <div class="image-wrapper">
+                    <img src="${product.img}" alt="${product.name}">
+                </div>
+            </div>
+
+            <div class="detail-right-info">
+                <span class="detail-category-tag">✨ Sản phẩm chính hãng</span>
+                <h1 class="detail-title">${product.name}</h1>
+                
+                ${priceHtml}
+
+                <div class="detail-policy-box">
+                    <div class="policy-item">🚚 <span>Miễn phí vận chuyển toàn quốc</span></div>
+                    <div class="policy-item">🛡️ <span>Bảo hành 12 tháng chính hãng lỗi 1 đổi 1</span></div>
+                    <div class="policy-item">💳 <span>Trả góp 0% lãi suất qua thẻ tín dụng</span></div>
+                </div>
+
+                <div class="detail-actions-group">
+                    <button class="btn-buy-now" onclick="buyNowAndGoToCart(${product.id})">MUA NGAY</button>
+                    <button class="btn-add-to-cart-large" onclick="addToCart(${product.id})">Thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="detail-description">
+                    <h3>Thông số kỹ thuật & Mô tả</h3>
+                    <p>Sở hữu thiết kế đột phá công nghệ, dòng sản phẩm mang lại hiệu năng xử lý cực đỉnh, dung lượng pin bền bỉ hỗ trợ tối đa cho mọi nhu cầu làm việc và giải trí đỉnh cao của bạn.</p>
+                </div>
+            </div>
+        `;
+    }
+}
+
+function buyNowAndGoToCart(id) {
+    addToCart(id);
+    window.location.href = 'gio-hang.html';
+}
+
+    </script>
+</body>
+</html>

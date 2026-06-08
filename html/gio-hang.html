@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - HoaNK Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="../index.html">HoaNK</a></div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Bạn tìm gì hôm nay?..." onkeyup="handleSearch(event)">
+                <button type="button" onclick="triggerSearch()" class="search-btn-svg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="header-menu">
+                <nav>
+                    <ul>
+                        <li><a href="san-pham.html">sản phẩm</a></li>
+                        <li><a href="gioi-thieu.html">giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                        <li><a href="#tai-khoan">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <a href="gio-hang.html" class="cart-btn active">giỏ hàng (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-page-container">
+        <h2 class="cart-page-title">GIỎ HÀNG CỦA BẠN (<span id="cart-total-items">0</span> sản phẩm)</h2>
+        
+        <div class="cart-page-wrapper">
+            <div class="cart-left-column" id="cart-items-list">
+                </div>
+
+            <div class="cart-right-column">
+                <div class="checkout-box-summary">
+                    <h3>Tóm tắt đơn hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="cart-total" class="price-highlight">0 đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span style="color: #22c55e; font-weight: bold;">Miễn phí</span>
+                    </div>
+                    
+                    <hr class="dashed-line">
+
+                    <form id="checkout-form" class="checkout-cart-page-form" onsubmit="processCheckout(event)">
+                        <h3>Thông tin giao hàng</h3>
+                        <div class="input-field">
+                            <input type="text" id="customer-name" required placeholder="Họ và tên người nhận *">
+                        </div>
+                        <div class="input-field">
+                            <input type="tel" id="customer-phone" required placeholder="Số điện thoại liên lạc *">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="customer-address" required placeholder="Địa chỉ giao hàng chính xác *">
+                        </div>
+                        <div class="input-field">
+                            <select id="payment-method">
+                                <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+                                <option value="Banking">Chuyển khoản qua Ngân hàng</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-final-checkout">XÁC NHẬN ĐẶT HÀNG NGAY</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>110124066, DA24TTC, Thiết kế web</p>
+        <p>GVHD: Nguyễn Ngọc Đan Thanh</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Khi mở trang giỏ hàng lên, lập tức render dữ liệu ra
+        window.onload = function() {
+            updateCartCount();
+            displayCart();
+        }
+    </script>
+</body>
+</html>

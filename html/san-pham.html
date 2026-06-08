@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm - HoaNK Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="../index.html">HoaNK</a></div>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Bạn tìm gì hôm nay?..." onkeyup="handleSearch(event)">
+                <button type="button" onclick="triggerSearch()" class="search-btn-svg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="header-menu">
+                <nav>
+                    <ul>
+                        <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                        <li><a href="#tai-khoan">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <a href="gio-hang.html" class="cart-btn">Giỏ hàng (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="shop-page-wrapper-full">
+        <main class="shop-main-content">
+            <div class="block-title-bar">
+                <span class="block-title" id="current-category-title">Điện thoại</span>
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn" onclick="filterCategory('all')">Tất cả</button>
+                <button class="tab-btn active" onclick="filterCategory('phone')">Điện thoại</button>
+                <button class="tab-btn" onclick="filterCategory('tablet')">Tablet</button>
+                <button class="tab-btn" onclick="filterCategory('laptop')">Laptop</button>
+                <button class="tab-btn" onclick="filterCategory('watch')">Smart Watch</button>
+                <button class="tab-btn" onclick="filterCategory('accessory')">Phụ kiện</button>
+            </div>
+
+            <div class="product-grid" id="all-products">
+                </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>110124066, DA24TTC, Thiết kế web</p>
+        <p>GVHD: Nguyễn Ngọc Đan Thanh</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Xử lý đọc dữ liệu danh mục khi trang vừa tải xong
+        window.onload = function() {
+            // Kiểm tra xem người dùng có chuyển từ danh mục ở trang chủ sang không
+            const savedCategory = sessionStorage.getItem('selectedCategory');
+            
+            if (savedCategory) {
+                // Nếu có, kích hoạt bộ lọc danh mục tương ứng
+                filterCategory(savedCategory);
+                // Xóa danh mục đã lưu trong bộ nhớ tạm để tránh lặp lại logic
+                sessionStorage.removeItem('selectedCategory');
+            } else {
+                // Nếu truy cập trực tiếp, mặc định hiển thị danh mục "all" (Điện thoại)
+                renderProducts('all', false);
+            }
+            
+            // Cập nhật số lượng hiển thị trên icon giỏ hàng ở Header
+            updateCartCount();
+        }
+    </script>
+</body>
+</html>

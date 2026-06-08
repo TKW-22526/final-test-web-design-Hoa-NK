@@ -3,186 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Khoản - Sắp Ra Mắt | HoaNK Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background: radial-gradient(circle at center, #2a2c42 0%, #13141f 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Hiệu ứng vòng tròn phát sáng mờ phía sau */
-        body::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: rgba(0, 229, 255, 0.05);
-            border-radius: 50%;
-            blur: 100px;
-            filter: blur(80px);
-            top: 20%;
-            left: 20%;
-            z-index: 0;
-        }
-
-        .coming-soon-container {
-            text-align: center;
-            max-width: 600px;
-            padding: 40px 20px;
-            z-index: 1;
-            position: relative;
-        }
-
-        /* Logo hoặc Tên thương hiệu */
-        .brand-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #00e5ff;
-            margin-bottom: 30px;
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 15px;
-            background: linear-gradient(45deg, #ffffff, #a5a6f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        /* Khung hiển thị đếm ngược giả lập hoặc thông điệp đi kèm */
-        .status-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px border solid rgba(255, 255, 255, 0.1);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #a5a6f6;
-            margin-bottom: 20px;
-            backdrop-filter: blur(5px);
-        }
-
-        /* Hộp đăng ký nhận thông báo */
-        .notify-box {
-            display: flex;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 6px;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-        }
-
-        .notify-box:focus-within {
-            border-color: #00e5ff;
-            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
-        }
-
-        .notify-box input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #fff;
-            padding: 0 20px;
-            flex: 1;
-            font-size: 0.95rem;
-        }
-
-        .notify-box input::placeholder {
-            color: #64748b;
-        }
-
-        .notify-box button {
-            background: #00e5ff;
-            color: #0f172a;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.95rem;
-            transition: background 0.2s ease;
-        }
-
-        .notify-box button:hover {
-            background: #00b4cc;
-        }
-
-        /* Nút quay lại trang chủ */
-        .btn-back-home {
-            display: inline-flex;
-            align-items: center;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .btn-back-home:hover {
-            color: #ffffff;
-        }
-
-        .btn-back-home svg {
-            margin-right: 8px;
-            transition: transform 0.2s ease;
-        }
-
-        .btn-back-home:hover svg {
-            transform: translateX(-4px);
-        }
-    </style>
+    <title>Đăng Nhập - HoaNK Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="taikh-body">
 
-    <div class="coming-soon-container">
-        <div class="brand-logo">HoaNK Store</div>
-        
-        <div class="status-badge">Tính năng đang phát triển</div>
-        
-        <h1>Hệ Thống Thành Viên Sắp Ra Mắt!</h1>
-        
-        <p>Chúng tôi đang xây dựng không gian quản lý tài khoản, lịch sử đơn hàng và các chương trình ưu đãi đặc quyền dành riêng cho bạn. Hãy để lại email để nhận thông báo sớm nhất.</p>
-        
-        <form class="notify-box" onsubmit="alert('Cảm ơn bạn! Chúng tôi sẽ gửi thông báo khi tính năng ra mắt.'); this.reset(); return false;">
-            <input type="email" placeholder="Nhập địa chỉ email của bạn..." required>
-            <button type="submit">Thông báo cho tôi</button>
-        </form>
+    <header class="taikh-header">
+        <div class="taikh-header-container">
+            <div class="taikh-logo"><a href="../index.html">HoaNK</a></div>
+            
+            <div class="taikh-search-bar">
+                <input type="text" placeholder="Bạn tìm gì hôm nay?..." disabled>
+                <button type="button" class="taikh-search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="taikh-nav-menu">
+                <nav>
+                    <ul>
+                        <li><a href="san-pham.html">sản phẩm</a></li>
+                        <li><a href="gioi-thieu.html">giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                        <li><a href="tai-khoan.html" class="active">Tài khoản</a></li>
+                    </ul>
+                </nav>
+                <a href="gio-hang.html" class="taikh-cart-btn">giỏ hàng (0)</a>
+            </div>
+        </div>
+    </header>
 
-        <a href="../index.html" class="btn-back-home">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            Quay lại trang chủ
-        </a>
-    </div>
+    <main class="taikh-main">
+        <div class="taikh-login-card">
+            <h2>Đăng Nhập</h2>
+            
+            <div class="taikh-form-group">
+                <label>Tên đăng nhập hoặc Email</label>
+                <input type="text" placeholder="Nhập email tài khoản...">
+            </div>
+            <div class="taikh-form-group">
+                <label>Mật khẩu</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="taikh-btn-login-dummy">Đăng nhập</button>
+
+            <div class="taikh-coming-soon-overlay">
+                <div class="taikh-coming-soon-badge">Tính năng mới</div>
+                <h3>Coming Soon</h3>
+                <p>Hệ thống đăng nhập thành viên đang trong quá trình hoàn thiện cấu trúc.</p>
+                <a href="../index.html" class="taikh-btn-back-home">Quay lại trang chủ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="taikh-footer">
+        <p>110124066, DA24TTC, Thiết kế web</p>
+        <p>GVHD: Nguyễn Ngọc Đan Thanh</p>
+    </footer>
 
 </body>
 </html>

@@ -178,7 +178,7 @@ Sinh viên cập nhật thông tin cá nhân tại đây:
 Họ và tên: Nguyễn Khánh Hòa
 Mã số sinh viên: 110124066
 Lớp: DA24TTC
-Tên đề tài: Trang Web bán hàng 
-Liên kết GitHub repository:
-Liên kết GitHub Pages:
+Tên đề tài: Xây dựng website bán hàng trực tuyến về sản phẩn công nghệ
+Liên kết GitHub repository: https://github.com/TKW-22526/final-test-web-design-Hoa-NK
+Liên kết GitHub Pages: https://tkw-22526.github.io/final-test-web-design-Hoa-NK/
 ```

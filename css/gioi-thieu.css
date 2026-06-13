@@ -1,0 +1,136 @@
+@import url("base.css");
+/* ==========================================================================
+   9. TRANG GIỚI THIỆU (ABOUT US)
+   ========================================================================== */
+.about-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+    min-height: 75vh;
+}
+
+.about-wrapper {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.about-hero {
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.about-hero h1 {
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.about-lead {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+}
+
+.about-divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.about-text-block h2 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-text-block p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-text-block.highlight-box {
+    background: #fdf2f2;
+    border-left: 4px solid #e51f2b;
+    padding: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.about-values {
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+.about-values .section-title {
+    font-size: 1.6rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.value-card {
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    border-color: #ffebee;
+    box-shadow: 0 8px 25px rgba(229, 31, 43, 0.08);
+}
+
+.value-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-size: 1.15rem;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+@media (min-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

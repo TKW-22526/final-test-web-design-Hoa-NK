@@ -1,0 +1,96 @@
+@import url("base.css");
+/* ==========================================================================
+   8. TRANG LIÊN HỆ (CONTACT MODERN FORM)
+   ========================================================================== */
+.contact-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper.single-form {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.contact-form-block h2 {
+    font-size: 1.6rem;
+    color: #222;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group .required {
+    color: #e51f2b;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #e51f2b;
+    box-shadow: 0 0 0 3px rgba(229, 31, 43, 0.1);
+}
+
+.btn-submit-contact {
+    width: 100%;
+    background: #e51f2b;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 12px rgba(229, 31, 43, 0.2);
+    margin-top: 10px;
+}
+
+.btn-submit-contact:hover {
+    background: #b71c1c;
+}
+

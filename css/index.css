@@ -1,0 +1,93 @@
+@import url("base.css");
+/* ==========================================================================
+   3. TRANG CHỦ (HERO BANNER & SIDEBAR)
+   ========================================================================== */
+.hero-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+}
+
+.sidebar-menu {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.sidebar-menu ul li:last-child a {
+    border-bottom: none;
+}
+
+.sidebar-menu ul li a:hover, 
+.sidebar-menu ul li a.active {
+    background-color: #fff5f5;
+    color: #e51f2b;
+    font-weight: 600;
+}
+
+.main-banner {
+    background: linear-gradient(135deg, #2b2d42, #1a1a2e);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    min-height: 290px;
+    border: 1px solid #e1e1e1;
+}
+
+.banner-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner-content p {
+    color: #adb5bd;
+    margin-bottom: 20px;
+}
+.banner {
+    width: 100%;                /* Ảnh sẽ co giãn vừa khít theo độ rộng của .banner-content */
+    height: auto;               /* Tự động tính chiều cao theo tỉ lệ gốc, tuyệt đối không bị méo ảnh */
+    max-height: 400px;          /* Khống chế chiều cao tối đa của banner để không chiếm quá nhiều diện tích màn hình */
+    object-fit: cover;          /* Cắt cúp ảnh thông minh để phủ kín khung nếu ảnh quá dài hoặc quá cao */
+    display: block;
+}
+
+.btn-shop-now {
+    display: inline-block;
+    background-color: #e51f2b;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+@media (max-width: 992px) {
+    .product-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .hero-container { 
+        grid-template-columns: 1fr; 
+    }
+}

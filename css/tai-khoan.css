@@ -1,0 +1,139 @@
+@import url("base.css");
+
+.taikh-main {
+    flex: 1;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* --- Login card (nền mờ phía sau) --- */
+.taikh-login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.taikh-login-card h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Form bị làm mờ phía sau overlay */
+.taikh-form-group {
+    margin-bottom: 18px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.taikh-form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #666;
+    font-weight: 500;
+}
+
+.taikh-form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fafafa;
+}
+
+.taikh-btn-login-dummy {
+    width: 100%;
+    padding: 12px;
+    background-color: #e31a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* --- Overlay Coming Soon (lớp kính mờ) --- */
+.taikh-coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.taikh-coming-soon-badge {
+    background-color: #e31a1a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px rgba(227, 26, 26, 0.3);
+}
+
+.taikh-coming-soon-overlay h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e31a1a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.taikh-coming-soon-overlay p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    max-width: 280px;
+    margin-bottom: 20px;
+}
+
+.taikh-btn-back-home {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.taikh-btn-back-home:hover {
+    background-color: #e31a1a;
+}
+
+/* --- Footer trang tài khoản --- */
+.taikh-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
